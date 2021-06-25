@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github repo](https://github.com/leoguido/3-column-project)
-- Live Site URL: [netlify site](https://kind-jang-6f4082.netlify.app)
+- Live Site URL: [netlify site](https://column-design.netlify.app/)
 
 ### Built with
 
