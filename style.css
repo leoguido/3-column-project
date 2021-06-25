@@ -1,0 +1,119 @@
+/* "variables" */
+:root{
+    --color1: hsl(31, 77%, 52%);
+    --color2: hsl(184, 100%, 22%);
+    --color3: hsl(179, 100%, 13%);
+
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background: hsl(0, 0%, 95%);
+
+    --mainFont: 'Big Shoulders Display', cursive;
+    --secondaryFont: 'Lexend Deca', sans-serif;
+}
+
+/*Preparing to use rem instead of px*/
+html{
+	font-size: 62.5%;
+}
+body{
+	font-size: 16px;
+    background-color: var(--background);
+}
+
+/*Styling*/
+.columns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 9rem auto;
+}
+.column{
+    font-family: var(--secondaryFont);
+    color: var(--paragraphs);
+    display: flex;
+    width: 31.25rem;
+
+}
+.column-content{
+    width: 21.25rem;
+    margin: auto;
+    padding: 5rem 0;
+}
+.column-title{
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+.column-paragraph{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 4rem;
+}
+.column-button{
+    background-color: var(--background);
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1.5rem 3.5rem;
+    border-radius: 4rem;
+}
+
+/*Coloring each column and button 'cause native css suck */
+.columns-column1{
+    background-color: var(--color1);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.columns-column2{
+    background-color: var(--color2);
+}
+.columns-column3{
+    background-color: var(--color3);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.column-button1{
+    color: var(--color1);
+}
+.column-button1:hover{
+    background-color: var(--color1);
+    border: 0.2rem solid;
+    color: var(--background);
+}
+.column-button2{
+    color: var(--color2);
+}
+.column-button2:hover{
+    background-color: var(--color2);
+    border: 0.2rem solid;
+    color: var(--background);
+}
+.column-button3{
+    color: var(--color3);
+}
+.column-button3:hover{
+    background-color: var(--color3);
+    border: 0.2rem solid;
+    color: var(--background);
+}
+
+/*Media queries*/
+@media (min-width: 728px){
+    .columns{
+        height: 100%;
+        flex-direction: row;
+        margin: 20rem 0;
+    }   
+    .columns-column1{
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 1rem ;
+    }
+    .columns-column3{
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 1rem;
+    }
+    .column-paragraph{
+        margin-bottom: 10rem;
+    }
+}
